@@ -1,16 +1,20 @@
 package menjacnica;
 
 public class Valuta {
-	String naziv;
-	String skraceniNaziv;
-	String kurs;
+	private String naziv;
+	private String skraceniNaziv;
+	private String kurs;
 
 	public String getNaziv() {
 		return naziv;
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv!=null){
 		this.naziv = naziv;
+	}else{
+		throw new RuntimeException("Naziv ne sme biti null");
+	}
 	}
 
 	public String getSkraceniNaziv() {
@@ -18,7 +22,11 @@ public class Valuta {
 	}
 
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if(skraceniNaziv!=null){
 		this.skraceniNaziv = skraceniNaziv;
+	}else{
+		throw new RuntimeException("Skracenica ne sme biti null");
+	}
 	}
 
 	public String getKurs() {
@@ -26,7 +34,11 @@ public class Valuta {
 	}
 
 	public void setKurs(String kurs) {
+		if(kurs!=null){
 		this.kurs = kurs;
+	}else{
+		throw new RuntimeException("Vrsta kursa ne sm biti null");
+	}
 	}
 
 	@Override
