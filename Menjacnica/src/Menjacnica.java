@@ -8,10 +8,7 @@ public class Menjacnica implements MenjacnicaInterfejs {
 
 	@Override
 	public void dodajKurs(Valuta kursZaDan) {
-		if(!kursevi.contains(kursZaDan)){
 			kursevi.add(kursZaDan);
-		}
-
 	}
 
 	@Override
@@ -30,5 +27,7 @@ public class Menjacnica implements MenjacnicaInterfejs {
 		}
 		return rezultat;
 	}
+	
+	
 
 }
